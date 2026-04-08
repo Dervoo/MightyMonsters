@@ -10,7 +10,7 @@ public class CombatVisualizer : MonoBehaviour
     public static CombatVisualizer Instance { get; private set; }
 
     [Header("Positioning Settings")]
-    public Vector3 playerTeamStartPos = new Vector3(-12, 0, -6);
+    public Vector3 playerTeamStartPos = new Vector3(-18, 0, -8);
     public Vector3 enemyTeamStartPos = new Vector3(12, 0, 6);
     public Vector3 lineDirection = new Vector3(1, 0, -1);
     public float unitSpacing = 5.0f; // Większy odstęp dla większych jednostek
