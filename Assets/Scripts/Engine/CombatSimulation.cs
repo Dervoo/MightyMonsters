@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using SWWoW.Models;
+using UnityEngine;
 
 namespace SWWoW.Engine
 {
@@ -12,7 +13,7 @@ namespace SWWoW.Engine
         public void Run(List<Unit> playerTeam, List<Unit> enemyTeam)
         {
             engine = new CombatEngine(playerTeam, enemyTeam);
-            Console.WriteLine("--- COMBAT START ---");
+            Debug.Log("--- COMBAT START ---");
 
             int turnCounter = 0;
             string winner;
@@ -24,8 +25,8 @@ namespace SWWoW.Engine
                 turnCounter++;
             }
 
-            Console.WriteLine("--- COMBAT END ---");
-            Console.WriteLine($"Winner: {winner}");
+            Debug.Log("--- COMBAT END ---");
+            Debug.Log($"Winner: {winner}");
         }
 
         private void ProcessTurn(Unit unit)
@@ -44,7 +45,7 @@ namespace SWWoW.Engine
                 float damage = engine.CalculateDamage(unit, target, spell);
                 engine.ApplyDamage(target, damage);
                 
-                Console.WriteLine($"{unit.Name} uses {spell.Name} on {target.Name} for {damage:F1} dmg. (Target HP: {target.CurrentHP:F1})");
+                Debug.Log($"{unit.Name} uses {spell.Name} on {target.Name} for {damage:F1} dmg. (Target HP: {target.CurrentHP:F1})");
                 
                 spell.ResetCooldown();
             }
