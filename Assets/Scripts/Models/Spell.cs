@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SWWoW.Models
 {
-    public enum SpellType { BasicAttack, SpecialAttack, AoE, Heal, Buff, Debuff }
+    public enum SpellType { BasicAttack, SpecialAttack, AoE, Heal, AoEHeal, Buff, AoEBuff, Debuff, AoEDebuff }
 
     [CreateAssetMenu(fileName = "NewSpell", menuName = "SWWoW/Spell")]
     public class Spell : ScriptableObject

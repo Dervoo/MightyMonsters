@@ -25,9 +25,9 @@ namespace SWWoW.Engine
             unit.baseDefense = 50;
             unit.baseSpeed = 95;
             unit.element = ElementType.Fire;
-            unit.tags.AddRange(new[] { "Orc", "Warrior" });
             unit.spells.Add(CreateSpell("Smash", 0, SpellType.BasicAttack, 1.0f));
-            unit.spells.Add(CreateSpell("Execute", 4, SpellType.SpecialAttack, 2.5f));
+            unit.spells.Add(CreateSpell("Whirlwind", 3, SpellType.AoE, 0.7f)); // AOE ATTACK
+            unit.spells.Add(CreateSpell("Enrage", 4, SpellType.Buff, 1.5f));
             return new UnitInstance(unit);
         }
 
@@ -40,9 +40,9 @@ namespace SWWoW.Engine
             unit.baseDefense = 30;
             unit.baseSpeed = 110;
             unit.element = ElementType.Earth;
-            unit.tags.AddRange(new[] { "Elf", "Priest" });
             unit.spells.Add(CreateSpell("Smite", 0, SpellType.BasicAttack, 0.8f));
-            unit.spells.Add(CreateSpell("Holy Light", 3, SpellType.Heal, 1.5f));
+            unit.spells.Add(CreateSpell("Holy Light", 2, SpellType.Heal, 1.2f));
+            unit.spells.Add(CreateSpell("Prayer of Mending", 4, SpellType.AoEHeal, 0.6f)); // AOE HEAL
             return new UnitInstance(unit);
         }
 
@@ -55,9 +55,9 @@ namespace SWWoW.Engine
             unit.baseDefense = 35;
             unit.baseSpeed = 105;
             unit.element = ElementType.Water;
-            unit.tags.AddRange(new[] { "Undead", "Warlock" });
             unit.spells.Add(CreateSpell("Shadow Bolt", 0, SpellType.BasicAttack, 1.1f));
-            unit.spells.Add(CreateSpell("Chaos Bolt", 5, SpellType.SpecialAttack, 3.0f));
+            unit.spells.Add(CreateSpell("Rain of Fire", 5, SpellType.AoE, 0.8f)); // AOE ATTACK
+            unit.spells.Add(CreateSpell("Corruption", 3, SpellType.Debuff, 0.5f));
             return new UnitInstance(unit);
         }
 
@@ -70,9 +70,9 @@ namespace SWWoW.Engine
             unit.baseDefense = 40;
             unit.baseSpeed = 115;
             unit.element = ElementType.Earth;
-            unit.tags.AddRange(new[] { "Troll", "Hunter" });
             unit.spells.Add(CreateSpell("Shot", 0, SpellType.BasicAttack, 1.0f));
-            unit.spells.Add(CreateSpell("Aimed Shot", 3, SpellType.SpecialAttack, 1.8f));
+            unit.spells.Add(CreateSpell("Multi-Shot", 3, SpellType.AoE, 0.6f)); // AOE ATTACK
+            unit.spells.Add(CreateSpell("Trap", 4, SpellType.Debuff, 0.7f));
             return new UnitInstance(unit);
         }
 
@@ -85,9 +85,9 @@ namespace SWWoW.Engine
             unit.baseDefense = 60;
             unit.baseSpeed = 90;
             unit.element = ElementType.Fire;
-            unit.tags.AddRange(new[] { "Dwarf", "Paladin" });
             unit.spells.Add(CreateSpell("Hammer", 0, SpellType.BasicAttack, 0.9f));
             unit.spells.Add(CreateSpell("Holy Shield", 4, SpellType.Buff, 0.0f));
+            unit.spells.Add(CreateSpell("Consecration", 5, SpellType.AoE, 0.6f)); // AOE ATTACK
             return new UnitInstance(unit);
         }
     }

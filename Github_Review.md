@@ -1,5 +1,7 @@
 # 📋 Instrukcja: Czyste Code Review na GitHub
 
+## Do komentarzy używaj pliku changes.md on najlepiej ukazuje jakie rzeczy zostały wykonane, i też daty mamy
+
 ## 🚫 Problem: Wstrzykiwanie metadanych
 Podczas dodawania komentarzy przez `gh CLI` przy użyciu plików tymczasowych (`--body-file`), systemy automatyzacji mogą wstrzykiwać niepożądane metadane, takie jak:
 - `noteId: "..."`
