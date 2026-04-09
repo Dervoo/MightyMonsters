@@ -32,15 +32,17 @@ namespace SWWoW.Engine
             List<UnitInstance> players = new List<UnitInstance>();
             List<UnitInstance> enemies = new List<UnitInstance>();
 
-            players.Add(UnitDatabase.GetOrcWarrior());
-            players.Add(UnitDatabase.GetNightElfPriest());
-            players.Add(UnitDatabase.GetDwarfPaladin());
-            players.Add(UnitDatabase.GetTrollHunter());
+            // Drużyna Gracza (Light & Nature)
+            players.Add(UnitDatabase.GetRoyalProtector());
+            players.Add(UnitDatabase.GetIronCrossbowman());
+            players.Add(UnitDatabase.GetDawnPriestess());
+            players.Add(UnitDatabase.GetForestDruid());
 
-            enemies.Add(UnitDatabase.GetUndeadWarlock());
-            enemies.Add(UnitDatabase.GetTrollHunter());
-            enemies.Add(UnitDatabase.GetUndeadWarlock());
-            enemies.Add(UnitDatabase.GetTrollHunter());
+            // Drużyna Przeciwnika (Void, Chaos, Nature)
+            enemies.Add(UnitDatabase.GetAncientEnt());
+            enemies.Add(UnitDatabase.GetDemonSorcerer());
+            enemies.Add(UnitDatabase.GetVoidAssassin());
+            enemies.Add(UnitDatabase.GetBonebreaker());
 
             for (int i = 0; i < players.Count; i++) visualizer.SpawnUnit(players[i], true, i);
             for (int i = 0; i < enemies.Count; i++) visualizer.SpawnUnit(enemies[i], false, i);
