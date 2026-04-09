@@ -10,7 +10,10 @@ namespace SWWoW.Models
     public class Unit : ScriptableObject
     {
         public string unitName;
+        public Sprite visual; // Legacy 2D
+        public GameObject prefab3D; // Nowe pole na model 3D
         public float baseHP;
+
         public float baseAttack;
         public float baseDefense;
         public float baseSpeed;
